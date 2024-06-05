@@ -1,0 +1,102 @@
+﻿:root {
+    --bg-color: #000000;
+    --fg-color: #ffffff;
+    --a-color: #d4cddc;
+    --a-hover-color: #896eaa;
+    --alt-bg-color: #391a55;
+    --alt-fg-color: #cec7d9;
+    --border-color: #0b090d;
+    --btn-color: black;
+    --brighter-bg: #111;
+    transition: color 1s ease;
+}
+
+.filled {
+    fill: var(--fg-color);
+    transition: fill 0.3s ease;
+}
+
+
+
+body, .themed{
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease;
+}
+
+.bg {
+    background-color: var(--bg-color);
+}
+
+.fg {
+    color: var(--fg-color);
+    
+    transition: max-height 0.5s ease, color 1s ease;
+}
+
+.alt_bg {
+    background-color: var(--alt-bg-color);
+}
+
+.alt_fg {
+    color: var(--alt-fg-color);
+}
+
+a, .nav-link{
+    color: var(--a-color);
+    transition: color 0.2s ease;
+}
+
+a:hover, .nav-link:hover  {
+    color: var(--a-hover-color);
+}
+
+.interactable {
+    color: var(--a-color);
+    transition: color 0.2s ease;
+}
+
+.interactable:hover {
+    color: var(--a-hover-color);
+}
+
+footer {
+    border-top-color: var(--fg-color);
+}
+
+.no-border {
+    border: 0;
+}
+
+.themed_button, .themed_card_button, .themed_narrow_button {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    transition: background-color 0.2s ease, color 1s ease, border-color 1s ease;
+}
+
+    .themed_button:hover, .themed_card_button:hover, .themed_narrow_button:hover {
+        color: var(--fg-color);
+        background-color: var(--btn-color);
+        transition: background-color 0.2s ease;
+    }
+
+.border_top {
+    border-top-color: var(--fg-color);
+}
+
+.border_bottom {
+    border-bottom-color: var(--fg-color);
+}
+
+.fg_for_bg {
+    background-color: var(--fg-color);
+}
+
+
+.datasheet-placeholder {
+    background-color: var(--brighter-bg);
+}
+
+
+

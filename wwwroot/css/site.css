@@ -1,0 +1,334 @@
+:root {
+    --side-width: 300px;
+    --content-margin: 20px;
+    --datasheet-width: 100%;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    
+  }
+    
+}
+.second_datasheet {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+@media (max-width: 768px){
+    :root {
+        --datasheet-width: 0;
+/*        --side-width: 0px;
+        --content-margin: 20px;*/
+    }
+    .second_col {
+        display: none;
+    }
+    .first_col{
+        width:100vh;
+    }
+    .second_datasheet {
+        display:block;
+    }
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    
+}
+
+.toggler-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggler-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+}
+.line-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.toggler-icon span {
+    display: block;
+    width: 31px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.side-section-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--side-width);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.side-section {
+    padding: 20px;
+}
+
+.side-content {
+    margin-right: 20px;
+    margin-left: calc(20px + var(--side-width));
+    margin-top: 20px;
+    width: calc(100vw - var(--side-width) - var(--content-margin) - var(--content-margin));
+   
+}
+
+.card {
+    overflow: hidden;
+    flex-direction: row;
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px
+}
+
+.card-body {
+    flex-grow: 5;
+}
+
+.image_wrapper {
+    justify-self: right;
+    max-width:fit-content;
+    
+    
+    max-height: 200px;
+    margin-right: 0;
+
+
+}
+
+.image_wrapper img {
+    border-radius: 15px;
+    float: right;
+    max-height: 100%;
+    width: fit-content;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.description {
+    width: 100%;
+    overflow: hidden;
+    max-height: 1.7em;
+    transition: max-height 0.6s;
+    max-width: calc(100vw - 4*var(--content-margin));
+}
+
+.img_buttons {
+
+    margin-top: -2em;
+    margin-left: 15px;
+}
+
+.datasheet {
+    position:fixed;
+    width: calc(var(--datasheet-width)/2);
+    height: 100%;
+}
+
+.datasheet_wrapper {
+    
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.col {
+    padding: 0;
+    margin: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.hide_side_btn {
+    text-align:right;
+    margin:10px;
+    margin-bottom:-57px;
+}
+
+
+.theme_toggler {
+    margin-left: 45px;
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+}
+
+
+
+.toggler_dot {
+    
+    margin-bottom: -77px;
+    transition: margin 0.3s ease;
+}
+
+.toggler_dot:hover {
+    margin-left: -11px;
+}
+
+.view_name {
+    width:100%;
+
+    padding: 40px;
+    text-align:center;
+}
+
+.view_desc {
+    padding: 15px 35px 15px 35px;
+    
+    white-space:break-spaces;
+    font-size: 1.3em;
+}
+
+#show_side_btn {
+    margin: -10px 0px 5px -10px;
+}
+
+.themed_button {
+    width: 100%;
+    text-align:left;
+}
+.themed_card_button {
+    float: right;
+    text-align: center;
+    margin: 0px 0px 0px 5px;
+
+}
+
+.card_chevrons {
+    margin-top: -10px;
+    float:left;
+}
+
+.card_butttons {
+    width: 50px;
+    float: right;
+    margin: 0;
+}
+
+.themed_narrow_button {
+    height: 70px;
+    width: fit-content;
+    border-radius:10px;
+    font-size: 1em;
+    float: left;
+    text-align: center;
+    margin: 10px 5px 20px 5px;
+}
+
+#options {
+    border-top-right-radius: 20px;
+    position: fixed;
+    width: 320px;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#wide_options {
+    border-top-right-radius: 20px;
+    position: fixed;
+    width: 320px;
+    height: fit-content;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+
+#view-theme-toggler {
+    left: 185px;
+    bottom: 20px
+}
+
+#update-theme-toggler {
+    left: 185px;
+    bottom: 20px
+}
+
+#browse-toggler-hitbox {
+    position: fixed;
+    width: 60px;
+    height: 40px;
+    left: 125px;
+    bottom: 15px;
+    
+}
+
+#update-toggler-hitbox {
+    position: fixed;
+    width: 60px;
+    height: 40px;
+    left: 240px;
+    bottom: 30px;
+}
+#view-toggler-hitbox {
+    position: fixed;
+    width: 60px;
+    height: 40px;
+    left: 240px;
+    bottom: 30px;
+   
+}
+
+.filler-div {
+    display:block;
+    height: 120px;
+}
+
+.datasheet-placeholder {
+    z-index:0;
+    margin: 20px;
+    height: calc(100% - 40px);
+    text-align: center;
+    align-content: center;
+    width: calc(50vw - 40px);
+    position: fixed;
+}
+
+.mycheckbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*margin-left: 80px;*/
+}
