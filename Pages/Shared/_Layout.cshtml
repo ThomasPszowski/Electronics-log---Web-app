@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"  href="/circuit_icon_v2.png">
+    <link rel="icon" href="/circuit_icon_v2.ico">
+    <title>@ViewData["Title"] - projekt_web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/projekt_web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/colors.css" asp-append-version="true" />
+    <script src="~/js/cookies.js"></script>
+    <script src="~/js/theme.js"></script>
+
+    
+</head>
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+
+    </div>
+    <header>
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm border_bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Wiki dla elektroniki</a>
+                <button class="navbar-toggler themed alt_bg alt_fg" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    
+                    <div class="toggler-icon ">
+                        <div class="line-container">
+                            <span class="themed"></span>
+                            <span class="themed"></span>
+                            <span class="themed"></span>
+                        </div>
+                        
+                    </div>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/Index">Przeglądaj</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-page="/CreatePage">Dodaj</a>
+                        </li>
+                        <li class="nav-item">
+                            <button id="changeThemeButton">Zmien Tryb</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
+        *@
+    </header>
+    @RenderBody()
+    @* <div class="container">
+        <main role="main" class="pb-3">
+            
+        </main>
+    </div> *@
+
+    @* <footer class="footer border_top text-muted">
+        <div class="container themed">
+            &copy; 2024 - stopka
+        </div>
+    </footer> *@
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/delete.js"></script>
+    <script src="~/js/upload.js"></script>
+    <script src="~/js/editableDivs.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
